@@ -20,7 +20,7 @@ public class JobData {
     private static final String DATA_FILE = "job_data.csv";
     private static boolean isDataLoaded = false;
 
-    private static ArrayList<HashMap<String, String>> allJobs;
+    public static ArrayList<HashMap<String, String>> allJobs;
 
     /**
      * Fetch list of all values from loaded data,

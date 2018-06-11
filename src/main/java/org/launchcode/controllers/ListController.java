@@ -26,6 +26,7 @@ public class ListController {
         columnChoices.put("all", "All");
     }
 
+    //simply displays the diff types of lists user can view
     @RequestMapping(value = "")
     public String list(Model model) {
 
@@ -33,7 +34,7 @@ public class ListController {
 
         return "list";
     }
-
+    //displays one view of  data obtained from jobData
     @RequestMapping(value = "values")
     public String listColumnValues(Model model, @RequestParam String column) {
 
@@ -51,7 +52,6 @@ public class ListController {
         }
 
     }
-
     @RequestMapping(value = "jobs")
     public String listJobsByColumnAndValue(Model model,
             @RequestParam String column, @RequestParam String value) {
@@ -62,4 +62,7 @@ public class ListController {
 
         return "list-jobs";
     }
+    // displays another view of data from jobData
+
+
 }

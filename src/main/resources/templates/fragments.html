@@ -27,5 +27,16 @@
         </div>
     </div>
 
+    <div th:fragment="List-Jobs">
+        <!--<p th:unless="${jobs} and ${jobs.size()}"> No Search Results</p>-->
+        <table class="job-listing" th:each="job : ${jobs}">
+            <tbody>
+            <tr th:each="map : ${job.keySet()}">
+                <td th:text="${map}"></td>
+                <td th:text="${job.get(map)}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
